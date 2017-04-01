@@ -29,26 +29,12 @@ def main():
             
         if(stopWords !=None):
             print("------------------------------------------------")
-            print("Logistic regression removing stop words")
-            lr = LRwithStopWords.LogisticRegression(trainingHamPath,trainingSpamPath,testHamPath,testSpamPath)
-            lr.run()
-            lr.train()
-            lr.test()
-            
-            print("------------------------------------------------")
             print("Naive Bayes removing stop words")
             nb = NBwithStopWords.NaiveBayes(trainingHamPath,trainingSpamPath,testHamPath,testSpamPath)
             nb.run()
             nb.train()
             nb.test()
         else:    
-            print("------------------------------------------------")
-            print("Logistic regression without removing stop words")
-            lr = LRwithoutStopWords.LogisticRegression(trainingHamPath,trainingSpamPath,testHamPath,testSpamPath)
-            lr.run()
-            lr.train()
-            lr.test()
-            
             print("------------------------------------------------")
             print("Naive Bayes without removing stop words")
             nb = NBwithoutStopWords.NaiveBayes(trainingHamPath,trainingSpamPath,testHamPath,testSpamPath)
